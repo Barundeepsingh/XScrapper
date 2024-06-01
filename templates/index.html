@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter Trends</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Twitter Trending Topics</h1>
+    <form action="{{ url_for('fetch_trends') }}" method="post">
+        <button type="submit">Click here to run the script.</button>
+    </form>
+    <hr>
+    {% if trends %}
+        <h2>Trends as of {{ trends['end_time'] }}</h2>
+        <ul>
+            {% for trend in trends['trending_topics'] %}
+                <li><h4>{{ trend }}</h4></li>
+            {% endfor %}
+        </ul>
+        <h2>The IP address used for this query was: {{ trends['ip_address'] }}</h2>
+        <h2>Here’s a JSON extract of this record from the MongoDB:</h2>
+        <pre>{{ trends | tojson(indent=2) }}</pre>
+        <form action="{{ url_for('fetch_trends') }}" method="post">
+            <button type="submit">Click here to run the query again</button>
+        </form>
+    {% else %}
+        <p>No trends found.</p>
+    {% endif %}
+</body>
+</html>
