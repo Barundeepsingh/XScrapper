@@ -19,6 +19,7 @@ load_dotenv()
 
 username_env = os.getenv('username')
 password_env = os.getenv('password')
+mongoDb_env = os.getenv('mongoDb')
 
 print("usernmae", username_env)
 
@@ -111,7 +112,7 @@ def fetch_trending_topics():
     }
 
 def store_in_mongodb(data):
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    client = pymongo.MongoClient(mongoDb_env)
     db = client["twitter_trends"]
     collection = db["trends"]
     collection.insert_one(data)
