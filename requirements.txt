@@ -3,12 +3,6 @@ pymongo
 Gunicorn
 requests
 selenium
-selenium.webdriver.common.by
-selenium.webdriver.chrome.options
-selenium.webdriver.common.keys
-selenium.webdriver.support.ui
-selenium.webdriver.support
-selenium.common.exceptions
 datetime
 uuid
 re
