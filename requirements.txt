@@ -5,7 +5,6 @@ requests
 selenium
 datetime
 uuid
-os
 subprocess
 bson
 flask.json.provider
