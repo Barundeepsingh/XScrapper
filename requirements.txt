@@ -1,3 +1,8 @@
 Flask
-pymong
+pymongo
 Gunicorn
+requests
+selenium
+datetime
+uuid
+bson
