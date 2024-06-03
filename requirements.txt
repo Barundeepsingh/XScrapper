@@ -6,4 +6,3 @@ selenium
 datetime
 uuid
 bson
-flask.json.provider
