@@ -2,7 +2,6 @@ Flask
 pymongo
 Gunicorn
 requests
-time
 selenium
 selenium.webdriver.common.by
 selenium.webdriver.chrome.options
