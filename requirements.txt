@@ -5,8 +5,6 @@ requests
 selenium
 datetime
 uuid
-re
-dotenv
 os
 subprocess
 bson
