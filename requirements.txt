@@ -1,8 +1,7 @@
-Flask
-pymongo
 Gunicorn
 requests
-selenium
 datetime
 uuid
-bson
+Flask
+pymongo
+selenium
